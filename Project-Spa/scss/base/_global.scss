@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $primary-font;
+    color: $primary-text-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $secondary-font;
+    color: $secondary-color;
+}
+
+h2 {
+    font-size: 42px;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.container {
+    max-width: $small-container;
+    width: $small-container;
+    padding: 0 23px;
+    margin: 0 auto;
+}
+
+a {
+    transition: all .3s;
+}
+
+section {
+    padding: 60px 0;
+
+}
+
+@media all and (min-width: $large) {
+    .container {
+        max-width: $large-container;
+    }
+}
+
+@media all and (min-width: $x-large) {
+    .container {
+        max-width: $x-large-container;
+    }
+}
