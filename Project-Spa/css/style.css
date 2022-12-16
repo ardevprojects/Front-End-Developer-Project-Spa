@@ -308,6 +308,7 @@ section .section-header p {
   top: 0;
   width: 100%;
   z-index: 999;
+  background-color: #fff;
   padding: 12px 0;
 }
 .main-nav .main-nav-holder {
@@ -383,16 +384,19 @@ section .section-header p {
     align-self: flex-start;
   }
   .main-nav .open-menu-holder .menu {
+    list-style: none;
     background-color: #fff;
   }
   .main-nav .open-menu-holder .menu .menu-item {
     display: inline-block;
     margin: 0 20px;
     font-size: initial;
+    text-transform: uppercase;
   }
   .main-nav .open-menu-holder .menu .menu-item a {
     color: #473452;
     font-weight: 700;
+    text-decoration: none;
   }
 }
 
@@ -475,7 +479,8 @@ section .section-header p {
   }
 }
 @media all and (max-width: 480px) {
-  .main-header .buttons-panel .reserve, .main-header .buttons-panel .watch {
+  .main-header .buttons-panel .reserve,
+.main-header .buttons-panel .watch {
     margin: 0;
   }
 }
@@ -514,6 +519,9 @@ section .section-header p {
   }
   .col-md-33p {
     width: 33.33%;
+  }
+  .col-md-66p {
+    width: 66.66%;
   }
 }
 @media all and (min-width: 992px) {
@@ -592,6 +600,85 @@ section .section-header p {
     flex-wrap: wrap;
     justify-content: space-between;
   }
+  .appointment form input,
+.appointment form select {
+    width: 49%;
+  }
+  .appointment form textarea {
+    margin: 60px 0;
+  }
+}
+
+.contact {
+  color: #fff;
+  background-color: #1ba4ce;
+}
+.contact .section {
+  color: #fff;
+}
+.contact h2 {
+  color: #fff;
+}
+.contact .contact-data {
+  padding: 25px 0;
+  margin-bottom: 30px;
+}
+.contact .contact-data .contact-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-transform: uppercase;
+  justify-content: center;
+}
+.contact .contact-data .contact-item .img-holder {
+  width: 15%;
+  margin-right: 10px;
+  text-align: center;
+}
+.contact .contact-data .contact-item img {
+  width: 30px;
+}
+.contact .contact-data .contact-item a {
+  color: #fff;
+  text-decoration: none;
+}
+.contact .contact-data .contact-item a:hover {
+  text-decoration: underline;
+}
+@media all and (min-width: 768px) {
+  .contact .contact-data .contact-item .contact-item {
+    justify-content: flex-start;
+  }
+}
+.contact .contact-form {
+  padding: 25px 0;
+}
+
+.page-footer {
+  text-align: center;
+  padding: 30px;
+}
+.page-footer img {
+  width: 100px;
+}
+.page-footer .footer-nav .menu {
+  list-style: none;
+  background-color: #fff;
+  padding: 20px;
+}
+.page-footer .footer-nav .menu .menu-item {
+  display: inline-block;
+  margin: 0 20px;
+  font-size: initial;
+  text-transform: uppercase;
+}
+.page-footer .footer-nav .menu .menu-item a {
+  color: #473452;
+  font-weight: 700;
+  text-decoration: none;
+}
+.page-footer .footer-nav .menu .menu-item {
+  padding: 15px 0;
 }
 
 .btn-form, .btn-secondary, .btn-primary {
@@ -644,6 +731,21 @@ section .section-header p {
 }
 .infobox .infobox-inner img {
   width: 100%;
+}
+.infobox .infobox-inner .meta {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 24px;
+}
+.infobox .infobox-inner .meta .category {
+  margin-right: 5px;
+  text-decoration: none;
+  color: inherit;
+}
+.infobox .infobox-inner .meta .post-date {
+  margin-left: 5px;
+  text-decoration: none;
+  color: inherit;
 }
 .infobox .infobox-inner p {
   font-weight: 300;
@@ -710,7 +812,6 @@ select {
   margin-bottom: 15px;
   color: #fff;
   text-transform: uppercase;
-  -webkit-appearance: none;
 }
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder,

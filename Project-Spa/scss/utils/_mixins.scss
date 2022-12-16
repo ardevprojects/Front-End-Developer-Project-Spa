@@ -7,3 +7,21 @@
     justify-content: $justify;
     align-items: $align;
 }
+
+@mixin menu-list {
+    list-style: none;
+    background-color: #fff;
+
+    .menu-item {
+        display: inline-block;
+        margin: 0 20px;
+        font-size: initial;
+        text-transform: uppercase;
+
+        a {
+            color: $secondary-color;
+            font-weight: 700;
+            text-decoration: none;
+        }
+    }
+}

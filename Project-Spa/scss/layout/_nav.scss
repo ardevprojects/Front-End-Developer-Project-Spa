@@ -3,7 +3,7 @@
     top: 0;
     width: 100%;
     z-index: 999;
-    // background-color: #fff;
+    background-color: #fff;
     padding: 12px 0;
 
     .main-nav-holder {
@@ -72,82 +72,33 @@
         }
     }
 
-@media all and (min-width: $large) {
+    @media all and (min-width: $large) {
 
-    .main-nav-holder {
-        justify-content: flex-start;
-    }
+        .main-nav-holder {
+            justify-content: flex-start;
+        }
 
-    .logo {
-        height: 82px;
-    }
+        .logo {
+            height: 82px;
+        }
 
-    %mobile-controls {
-display: none;
-    }
+        %mobile-controls {
+            display: none;
+        }
 
-    .open-menu-holder {
-        display: block;
-        position: static;
-        background-color: transparent;
-        width: auto;
-        max-width: 100%;
-        padding: 0;
-        align-self: flex-start;
-        
-        .menu {
-            background-color: #fff;
+        .open-menu-holder {
+            display: block;
+            position: static;
+            background-color: transparent;
+            width: auto;
+            max-width: 100%;
+            padding: 0;
+            align-self: flex-start;
 
-            .menu-item {
-                display: inline-block;
-                margin: 0 20px;
-                font-size: initial;
-                
-                a {
-                    color: $secondary-color;
-                    font-weight: 700;
-                }
-             }
+            .menu {
+                @include menu-list;
+            }
         }
     }
-}
 
 }
-
-
-// .main-nav{
-
-// }
-// .container{
-
-// }
-// .main-nav-holder{
-
-// }
-// .logo{
-
-// }
-// .hamburger{
-
-// }
-// .fas{
-
-// }
-// .fa-bars{
-
-// }
-// .open-menu-holder{
-
-// }
-// .mobile-close{
-
-// }
-// .fa-times{
-
-// }
-// .menu{
-
-// }
-// .menu-item{
-
-// }

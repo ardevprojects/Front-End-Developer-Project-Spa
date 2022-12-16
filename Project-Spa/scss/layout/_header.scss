@@ -1,4 +1,3 @@
-
 .main-header {
     height: 700px;
     @include flexbox;
@@ -24,7 +23,7 @@
 
     .buttons-panel {
         margin-top: 40px;
-        
+
         .reserve {
             display: inline-block;
             padding: 14px 20px;
@@ -69,29 +68,32 @@
         position: absolute;
         left: 0;
         top: 35%;
-z-index: -1;
+        z-index: -1;
     }
 
     @media all and (min-width: $x-large) {
         .header-bg {
             max-width: 40%;
         }
-    } 
+    }
 
     @media all and (min-width: $large) {
         .main-header-holder {
             width: 60%;
         }
+
         .header-bg {
             display: block;
         }
-    } 
+    }
 
     @media all and (max-width: $x-small) {
         .buttons-panel {
-            .reserve, .watch {
+
+            .reserve,
+            .watch {
                 margin: 0;
             }
         }
-    } 
+    }
 }

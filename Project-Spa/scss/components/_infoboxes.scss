@@ -20,6 +20,24 @@
             width: 100%;
         }
 
+        .meta {
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-top: 24px;
+
+            .category {
+                margin-right: 5px;
+                text-decoration: none;
+                color: inherit;
+            }
+
+            .post-date {
+                margin-left: 5px;
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+
         p {
             font-weight: 300;
             margin-bottom: 30px;
