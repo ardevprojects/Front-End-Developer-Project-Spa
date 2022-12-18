@@ -589,17 +589,20 @@ section .section-header p {
   background-color: #1ba4ce;
   padding: 80px 40px;
 }
-.appointment form .appointment-message {
+.appointment form .appointment-message-wrapper .appointment-message {
   width: 100%;
   display: none;
 }
-.appointment form .appointment-message.error {
+.appointment form .appointment-message-wrapper .appointment-message.error {
   color: #f00;
   display: block;
 }
-.appointment form .appointment-message.sent {
+.appointment form .appointment-message-wrapper .appointment-message.sent {
   color: #FFF;
   display: block;
+}
+.appointment form .appointment-message-wrapper img {
+  width: 100px;
 }
 @media all and (min-width: 992px) {
   .appointment .desctop-background {
@@ -853,4 +856,4 @@ select.error {
 
 textarea {
   height: 100px;
-}
+}/*# sourceMappingURL=style.css.map */

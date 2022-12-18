@@ -1,22 +1,13 @@
 const team = ['Janette Austin', 'Ann Penn', 'Austin Pow'];
-// const team = {
-//     1: 'Janette Austin', 2: 'Ann Penn', 3: 'Austin Pow'
-// };
+let img = document.createElement('img');
+let src = document.querySelector('.appointment-message-wrapper')
+
 let i = 0
 
 team.forEach(element => {
     document.querySelector(`.team-member-${i + 1}`).innerText = team[i];
-    i = i + 1
+    i += 1
 });
-
-// for (const key in team) {
-//    document.querySelector(`.team-member-${key}`).innerText = 
-// }
-
-// team.forEach(i => {
-//     document.querySelector(`.team-member-${i + 1}`).innerText = team[i];
-// });
-
 
 document.querySelector('.mobile-hamburger').addEventListener('click', function () {
     document.querySelector('.open-menu-holder').classList.toggle('open');
@@ -28,10 +19,17 @@ document.querySelector('.mobile-menu-close').addEventListener('click', function 
 
 const createAppoinment = (appoinment) => {
     const appointmentMessage = document.querySelector('.appointment-message');
+
     const freeTeamMember = () => {
-        let memberChosen = team[Math.floor(Math.random() * team.length)];
-        return memberChosen;
+        let randomMember = Math.floor(Math.random() * team.length);
+        let freeMember = team[randomMember];
+
+        return { randomMember, freeMember };
     }
+
+    let memberInfo = freeTeamMember();
+    let randomMember = memberInfo.randomMember;
+    freeMember = memberInfo.freeMember;
 
     fetch('https://akademia108.pl/api/ajax/post-appointment.php', {
         headers: {
@@ -43,9 +41,14 @@ const createAppoinment = (appoinment) => {
     })
         .then(res => res.json())
         .then(resJSON => {
-            console.log(resJSON);
+            // let memberInfo = freeTeamMember();
+            // let randomMember = memberInfo.randomMember;
+            // freeMember = memberInfo.freeMember;
+
             appointmentMessage.classList.add('sent');
-            appointmentMessage.innerText = `Dear ${resJSON.appointment.name}, thank You for making your appointment for ${resJSON.appointment.service} on ${resJSON.appointment.time}, ${resJSON.appointment.date}. Your massage specialist will be ${memberChosen}`;
+            appointmentMessage.innerText = `Dear ${resJSON.appointment.name}, thank You for making your appointment for ${resJSON.appointment.service} on ${resJSON.appointment.time}, ${resJSON.appointment.date}. Your massage specialist will be ${freeMember}`;
+            img.src = `img/team-${randomMember + 1}.jpg`
+            src.appendChild(img);
         });
 }
 
@@ -67,6 +70,7 @@ document.querySelector('#appointment-form').addEventListener('submit', function 
 
     for (let i = 0; i < formFields.length; i++) {
         if (formFields[i].value === '') {
+            // allFields = true;
             allFields = false;
             formFields[i].classList.add('error');
             console.log('error');

@@ -15,20 +15,28 @@
         background-color: $primary-color;
         padding: 80px 40px;
 
-        .appointment-message {
-            width: 100%;
-            display: none;
+        .appointment-message-wrapper {
 
-            &.error {
-                color: #f00;
-                display: block;
+            .appointment-message {
+                width: 100%;
+                display: none;
+    
+                &.error {
+                    color: #f00;
+                    display: block;
+                }
+    
+                &.sent {
+                    color: #FFF;
+                    display: block;
+                }
             }
 
-            &.sent {
-                color: #FFF;
-                display: block;
+            img {
+                width: 100px;
             }
         }
+
     }
 
     @media all and (min-width: $large) {
