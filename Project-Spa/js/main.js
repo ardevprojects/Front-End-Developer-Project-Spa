@@ -4,7 +4,7 @@ let src = document.querySelector('.appointment-message-wrapper')
 
 let i = 0
 
-team.forEach(element => {
+team.forEach(() => {
     document.querySelector(`.team-member-${i + 1}`).innerText = team[i];
     i += 1
 });
